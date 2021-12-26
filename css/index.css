@@ -1,0 +1,191 @@
+/* Color Theme Swatches in Hex 
+.fresh-night-1-hex { color: #70468C; }  violeta
+.fresh-night-2-hex { color: #152B59; }  		azul
+.fresh-night-3-hex { color: #30A9C8; }  celeste
+.fresh-night-4-hex { color: #03A696; }  verde
+.fresh-night-5-hex { color: #F6A817; }  amarillo
+
+/* Color Theme Swatches in RGBA 
+.fresh-night-1-rgba { color: rgba(112, 70, 140, 1); }
+.fresh-night-2-rgba { color: rgba(21, 43, 89, 1); }
+.fresh-night-3-rgba { color: rgba(48, 169, 200, 1); }
+.fresh-night-4-rgba { color: rgba(3, 166, 150, 1); }
+.fresh-night-5-rgba { color: rgba(246, 168, 23, 1); }
+
+/* Color Theme Swatches in HSLA 
+.fresh-night-1-hsla { color: hsla(276, 33, 41, 1); }
+.fresh-night-2-hsla { color: hsla(220, 61, 21, 1); }
+.fresh-night-3-hsla { color: hsla(192, 61, 48, 1); }
+.fresh-night-4-hsla { color: hsla(174, 96, 33, 1); }
+.fresh-night-5-hsla { color: hsla(39, 92, 52, 1); }
+
+*/
+
+
+*{
+	margin: 0;
+	padding: 0;
+	background-origin: border-box;
+}
+
+body{
+	font-family: 'Concert One', cursive;
+	color: #30A9C8;
+}
+a{
+   font-family: 'Concert One', cursive;
+    color: #30A9C8; 
+}
+/**  -----     INICIO    -----    **/
+h1{
+    font-size: 3em;
+}
+/*  -----     BOTON MENU    -----    */
+.container, .button, .nav{
+    position: absolute;
+}
+
+.divMenu{
+    margin: auto;
+    top: 2%;
+    left: 2%;
+    margin-left: -20px;
+    position: fixed;
+}
+
+#toggle{
+    display: none;
+}
+
+.button{
+    z-index: 999;
+    width: 43px;
+    height: 43px;
+    background: #f6a817;
+    border-radius: 100%;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 1px 3px 10px 0 rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+.button:before{
+    position: absolute;
+    top: 20px;
+    left: 9px;
+    content: '';
+    width: 25px;
+    height: 2px;
+    background: #fff;
+    transform: rotate(90deg);
+}
+
+.button:after{
+    position: absolute;
+    top: 20px;
+    left: 9px;
+    content: '';
+    width: 25px;
+    height: 2px;
+    background: #fff;
+}
+
+.nav{
+    transform: translateY(-10%);
+    opacity: 0;
+    top: -8px;
+    left: 0px;
+    transition: all 0.5s ease-in-out;
+    background: white;
+    width: 150px;
+    border-radius: 5px;
+    transform: translateY(0%);
+    box-shadow: 2px 3px 10px 0 rgba(0,0,0,0.1);
+}
+
+.nav a{
+    text-align: center;
+    display: block;
+    margin: 20px 0;
+    color: #152B59;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 300ms;
+}
+
+.nav a:hover{
+    color: #5f5f5f;
+}
+
+#toggle:checked ~ .nav{
+    opacity: 1;
+    transform: translateY(10%);
+}
+
+#toggle:checked ~ .button{
+    transform: rotate(135deg);
+    box-shadow: 0 0 0 0 transparent;
+}
+/*  -----     BOTON DESCARGA    -----*/
+#botonCV{
+    width: 212px;
+    height: 57px;
+    background: #03a696;
+    border-radius: 8px 8px;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 1px 3px 10px 0 rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+h1{
+    padding: 11px;
+}
+h2 {
+    font-family: 'Concert One', cursive;
+    color: #403871;
+}
+
+/*  -----     SECCIONES GENERAL    -----*/
+section{
+	height: 892px;
+	display: flex;
+	justify-content: space-evenly;
+	padding: 0 40px;
+	align-items: center;
+}
+
+.linksSec1{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 11px;
+}
+.btn-descarga{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#sec1{
+	background-image: linear-gradient(45deg, #152B59 0%, #70468C 100%);
+}
+
+#sec3{
+	background-color: #30A9C8;
+}
+#sec4{
+	background-color: #03A696;
+}#sec5{
+	background-color: #F6A817; 
+}
+
+/*  -----     media query    -----*/
+@media (max-width: 800px) { 
+	.divMenu{
+    left: 50%;
+    }
+    .nav{
+    top: 13px;
+    left: -50px;
+    }
+}
+
+}
